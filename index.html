@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sky Lounge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── LANDING ── -->
+  <div class="landing" id="landing">
+    <div class="stars" id="stars"></div>
+    <div class="landing-glow"></div>
+    <div class="landing-content">
+      <div class="logo-wrap">
+        <div class="logo-outer-ring"></div>
+        <div class="logo-inner-ring"></div>
+        <div class="logo-circle" id="logoCircle">
+          <span class="logo-emoji">🍸</span>
+        </div>
+      </div>
+      <h1 class="brand-name">Sky Lounge</h1>
+      <div class="brand-divider"><span></span><span class="diamond">◆</span><span></span></div>
+      <p class="brand-tagline">Elevated Dining &amp; Cocktails</p>
+
+      <p class="choose-text">Select your experience</p>
+
+      <div class="choice-grid">
+        <button class="choice-card" onclick="enterMenu('dining')">
+          <div class="choice-card-glow"></div>
+          <span class="choice-big-icon">🍽</span>
+          <div class="choice-info">
+            <span class="choice-title">Dining Menu</span>
+            <span class="choice-subtitle">Food &amp; Cuisine</span>
+          </div>
+          <span class="choice-arrow">›</span>
+        </button>
+        <button class="choice-card" onclick="enterMenu('bar')">
+          <div class="choice-card-glow"></div>
+          <span class="choice-big-icon">🍹</span>
+          <div class="choice-info">
+            <span class="choice-title">Bar Menu</span>
+            <span class="choice-subtitle">Cocktails, Spirits &amp; Beer</span>
+          </div>
+          <span class="choice-arrow">›</span>
+        </button>
+      </div>
+
+      <div class="landing-footer-contact">
+        <p class="landing-address">📍 4th Floor, Shakambari Square, Durga Chowk<br>Akola, Maharashtra – 444005</p>
+        <a class="landing-phone" href="tel:09096322168">📞 090963 22168</a>
+      </div>
+      <p class="landing-footnote">All prices inclusive of taxes &nbsp;·&nbsp; Parcel charges applicable</p>
+    </div>
+  </div>
+
+  <!-- ── MENU SCREEN ── -->
+  <div class="menu-screen hidden" id="menuScreen">
+
+    <header class="topbar" id="topbar">
+      <button class="back-btn" onclick="goBack()">
+        <span class="back-arrow">‹</span> Back
+      </button>
+      <div class="topbar-brand">
+        <span id="topbarIcon" class="topbar-icon"></span>
+        <span id="topbarTitle" class="topbar-title"></span>
+      </div>
+      <div style="width:70px"></div>
+    </header>
+
+    <div class="search-bar-wrap">
+      <div class="search-bar">
+        <span class="s-icon">⌕</span>
+        <input type="text" id="searchInput" placeholder="Search menu…" autocomplete="off" />
+        <button class="s-clear hidden" id="clearBtn" onclick="clearSearch()">✕</button>
+      </div>
+    </div>
+
+    <div class="tab-scroll-wrap">
+      <nav class="tab-nav" id="tabNav"></nav>
+    </div>
+
+    <main class="menu-body" id="menuBody"></main>
+
+    <footer class="site-footer">
+      <div class="footer-logo">🍸 Sky Lounge</div>
+      <div class="footer-divider"><span></span><span class="footer-diamond">◆</span><span></span></div>
+      <div class="footer-contact">
+        <p class="footer-address">📍 4th Floor, Shakambari Square, Durga Chowk<br>Akola, Maharashtra – 444005</p>
+        <a class="footer-phone" href="tel:09096322168">📞 090963 22168</a>
+      </div>
+      <div class="footer-divider"><span></span><span class="footer-diamond">◆</span><span></span></div>
+      <p class="footer-note">All prices inclusive of taxes &nbsp;·&nbsp; Parcel charges applicable</p>
+      <p class="footer-note">Please allow 25–30 minutes to serve your order</p>
+    </footer>
+  </div>
+
+  <script src="menu-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
